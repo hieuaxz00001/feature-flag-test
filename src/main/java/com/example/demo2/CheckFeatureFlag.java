@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckFeatureFlag {
     String value(); // Tên cờ tính năng
-    String newFeature(); // Tên phương thức A
+    String newFeature() default ""; // Tên phương thức A// version sẽ removed
 }

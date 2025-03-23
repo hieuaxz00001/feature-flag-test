@@ -1,0 +1,15 @@
+ff4j:
+  features:
+    - uid: myFeature
+      enable: true
+      description: "ITSM-XYZ: myFeature"
+      custom-properties:
+        - name: releasedFromVersion
+          type: string
+          value: 0.1.0
+        - name: removedFromVersion
+          type: string
+          value: 1.1.2
+
+
+# ff4j.getFeature("myFeature").getCustomProperties()
