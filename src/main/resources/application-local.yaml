@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: demo2
+app:
+  version: @project.version@
+
+ff4j:
+  featureStore: memory
+  auto-create: true
+  job:
+    enable-auto-reload-job: true
+    time: "0 0/1 * * * ?"
+  features:
+    myFeature:
+      uid: myFeature
+      enable: true
+      description: "ITSM-XYZ: myFeature"
+      custom-properties:
+        releasedFromVersion:
+          type: string
+          value: 1.1.0
+        removedFromVersion:
+          type: string
+          value: 1.1.2
+        autoReload:
+          type: boolean
+          value: true
+        applyFromAppVersion:
+          type: string
+          value: "1.1.0"
+    myFeature2:
+      uid: myFeature2
+      enable: true
+      description: "ITSM-XYZ: myFeature2"
+      custom-properties:
+        releasedFromVersion:
+          type: string
+          value: 0.1.0
+        removedFromVersion:
+          type: string
+          value: 1.1.2
+        autoReload:
+          type: boolean
+          value: false

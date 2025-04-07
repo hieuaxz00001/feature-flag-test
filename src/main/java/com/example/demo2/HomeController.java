@@ -1,7 +1,7 @@
 package com.example.demo2;
 
+import com.example.demo2.aop.TcbFeatureFlag;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,7 +30,7 @@ public class HomeController {
     }
 
     @GetMapping("/test2")
-    @CheckFeatureFlag(value = "myFeature", newFeature = "homepage")
+    @TcbFeatureFlag(value = "myFeature", newFeature = "homepage")
     public String homepage3() {
         return myService2.executeFeature();
     }

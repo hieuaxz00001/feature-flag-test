@@ -1,5 +1,6 @@
 package com.example.demo2;
 
+import com.example.demo2.aop.TcbFeatureFlag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ public class MyService3Impl implements MyService{
         log.info("MyService3Impl New Feature is executed!");
     }
 
-    @CheckFeatureFlag(value = "myFeature", newFeature = "featureA")
+    @TcbFeatureFlag(value = "myFeature", newFeature = "featureA")
     public void featureB() {
         log.info("MyService3Impl Old Feature is executed!");
     }
